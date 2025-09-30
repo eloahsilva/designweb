@@ -3,13 +3,103 @@ $font-titulo : "Raleway", sans-serif;
 $font-texto : "IBM Plex Mono", monospace;
 
 /**    Especificando cores */
-$cor-bg-body: #1B1B1B;
+$cor-bg-body: #080808;
 $cor-bg-button: #3F8E00;
 $cor-text-title: #FFFFFF;
 $cor-text-body: #9C9C9C;
 $cor-border-button: #62BA1B;
 
 body{
-    font: $font-texto;
+    font-family: $font-texto;  
+    background-color: $cor-bg-body;
+    color: $cor-text-body;
+    font-size: 14px;
+    font-weight: 400;
+}
 
+.header{
+    background-color: #1B1B1B;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    .menu-navegacao{
+        gap: 32px;
+    }
+
+    .menu-social{
+        gap: 32px;
+    }
+}
+
+
+main{
+    .perfil{
+        margin: 50px;
+        h1{
+            font-family: $font-titulo;
+            font-size: 44px;
+            color: #FFFFFF;
+            margin-bottom: -15px;
+        }
+        h3{
+            font-family: $font-titulo;
+            font-weight: 200;
+            font-size: 24px;
+            color: #FFFFFF;
+        }
+
+        button{
+            width: 355px;
+            height: 63px;
+            font-family: $font-texto;
+            font-size: 16px;
+            font-weight: 700;
+            color: $cor-text-title;
+            padding: 1em 3em;
+            margin-top: 20px;
+            border-radius: 4px;
+            border: 1px solid $cor-border-button;
+            background: $cor-border-button;
+            box-shadow: 0 8px 30px 0 rgba($cor-bg-button, 0.50);
+        }
+    }
+}
+
+.trabalhos{
+    margin-left: 100px;
+    gap: 50px;
+}
+
+.lista-sem-estilo{
+    padding: 0;
+    list-style: none;
+}
+
+.minhafoto{
+    margin-top: 50px;
+    height: 350px;
+}
+
+a{
+    text-decoration: none;
+    color: #9C9C9C;
+}
+
+.logo{
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: #1B1B1B solid 1.5px;
+    border-radius: 5px;
+}
+
+h5{
+    margin-left: 50px;
+    font-size: 16px;
+    font-weight: 500;
 }

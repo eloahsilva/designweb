@@ -1,0 +1,133 @@
+/**    Especificando as fontes */
+/**    Especificando cores */
+body {
+  font-family: "IBM Plex Mono", monospace;
+  background-color: #080808;
+  color: #9C9C9C;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.header {
+  background-color: #1B1B1B;
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.header .menu-navegacao {
+  gap: 32px;
+}
+.header .menu-social {
+  gap: 32px;
+}
+
+main .perfil {
+  margin: 50px;
+}
+main .perfil h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 44px;
+  color: #FFFFFF;
+  margin-bottom: -15px;
+}
+main .perfil h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+main .perfil button {
+  width: 355px;
+  height: 63px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  padding: 1em 3em;
+  margin-top: 20px;
+  border-radius: 4px;
+  border: 1px solid #62BA1B;
+  background: #62BA1B;
+  box-shadow: 0 8px 30px 0 rgba(63, 142, 0, 0.5);
+}
+
+.trabalhos {
+  margin-left: 100px;
+  gap: 50px;
+}
+
+.lista-sem-estilo {
+  padding: 0;
+  list-style: none;
+}
+
+.minhafoto {
+  margin-top: 50px;
+  height: 350px;
+}
+
+a {
+  text-decoration: none;
+  color: #9C9C9C;
+}
+
+.logo {
+  padding: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: #1B1B1B solid 1.5px;
+  border-radius: 5px;
+}
+
+h5 {
+  margin-left: 50px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/**
+
+*/
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.display-flex, .container {
+  display: flex;
+}
+
+.alinhar-v-esquerda {
+  align-items: flex-start;
+}
+
+.alinhar-h-esquerda {
+  justify-content: flex-start;
+}
+
+.alinhar-v-direita {
+  align-items: flex-end;
+}
+
+.alinhar-h-direita {
+  justify-content: flex-end;
+}
+
+.alinhar-coluna {
+  flex-direction: column;
+}
+
+.alinhar-linha {
+  flex-direction: row;
+}
+
+.dividir-extremidades {
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=style.css.map */
