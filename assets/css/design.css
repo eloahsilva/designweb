@@ -24,6 +24,9 @@ body {
 .header .menu-social {
   gap: 32px;
 }
+.header .sanduiche {
+  display: none;
+}
 
 main .perfil {
   margin: 50px;
