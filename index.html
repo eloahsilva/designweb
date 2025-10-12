@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>Lista 5 - Migrando seu Portfólio para o Tailwind CSS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-[#080808] text-[#9C9C9C] m-2 ">
+    <style>
+        .font-ibm {
+            font-family: "IBM Plex Mono", monospace;
+        }
+        .font-rale {
+            font-family: "Raleway", sans-serif;
+        } 
+    </style>
 
-    <header class="header">
-        <nav class="container dividir-extremidades">
-            <ul class="lista-sem-estilo display-flex menu menu-navegacao">
+    <header class="bg-[#1B1B1B] h-[86px] mx-[100px] font-ibm text-[14px] content-center">
+        <nav class="flex justify-center justify-between p-[30px] px-[100px]">
+            <ul class="flex gap-8">
                 <li><a href="#">Estudos de caso</a></li>
                 <li><a href="#">Trabalhos</a></li>
                 <li><a href="#">Entre em contato</a></li>
             </ul>
-            <ul class="lista-sem-estilo display-flex menu menu-social">
+            <ul class="flex gap-7">
                 <li>
                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                 </li>
@@ -35,27 +43,27 @@
 
     <main>
 
-        <section class="container">
-            <div class="perfil">
-                <h1>Eloah Barros</h1>
-                <h3>UX / Dev Front-end</h3>
-                <p>Sou estudante de Informática para Internet do IFRN Campus Zona Norte, tenho 16 anos e estou cursando o segundo ano do ensino médio técnico. Na matéria de Design Web estou aprendendo HTML, CSS, Sass, Vercel e mais. </p>
-                <button>
+        <section class="flex mx-[130px] mt-[70px]">
+            <div class="mx-20">
+                <h1 class="font-rale text-white font-bold text-[44px]">Eloah Barros</h1>
+                <h3 class="font-rale font-extralight text-[24px] text-white mb-[20px]">UX / Dev Front-end</h3>
+                <p class="font-ibm text-[14px] max-w-[680px]">Sou estudante de Informática para Internet do IFRN Campus Zona Norte, tenho 16 anos e estou cursando o segundo ano do ensino médio técnico. Na matéria de Design Web estou aprendendo HTML, CSS, Sass, Vercel e mais. </p>
+                <button class="bg-[#62BA1B] font-ibm text-white font-bold h-[63px] w-[356px] rounded mt-[30px] shadow-[0_8px_30px_0_rgba(63,142,0,0.5)]">
                     Vamos trabalhar juntos <i class="fa-solid fa-chevron-right"></i></i>
                 </button>
             </div>
-            <figure class="foto">
-                <img class="minhafoto" src="assets/img/perfileloah.png" alt="Foto do Bruno Nakamura">
+            <figure class="">
+                <img class="w-[350px]" src="assets/img/perfileloah.png" alt="Foto do Bruno Nakamura">
             </figure>
         </section>
-        <section class="container alinhar-coluna last-jobs">
-            <h5>Trabalhou em:</h5>
-            <ul class="lista-sem-estilo display-flex trabalhos">
+        <section class="mx-[210px] mt-[40px]">
+            <h5 class="font-ibm font-medium">Trabalhou em:</h5>
+            <ul class="flex content-center justify-center mt-[38px] gap-[48px]">
                 <li><img src="assets/img/img-job-1.svg" alt=""></li>
-                <li><img class="logo" src="assets/img/img-job-2.svg" alt=""></li>
+                <li><img class="border-[1px]  border-zinc-900 border-solid rounded px-10 py-4" src="assets/img/img-job-2.svg" alt=""></li>
                 <li><img src="assets/img/img-job-3.svg" alt=""></li>
-                <li><img class="logo" src="assets/img/img-job-4.svg" alt=""></li>
-                <li><img class="logo" src="assets/img/img-job-5.svg" alt=""></li>
+                <li><img class="border-[1px]  border-zinc-900 border-solid rounded px-10 py-5" src="assets/img/img-job-4.svg" alt=""></li>
+                <li><img class="border-[1px]  border-zinc-900 border-solid rounded px-10 py-5" src="assets/img/img-job-5.svg" alt=""></li>
             </ul>
         </section>
 
