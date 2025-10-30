@@ -1,106 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <title>Landingpage - Version 1.0</title>
-  <style></style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
-<body class="font-['Inter']">
+<body class="font-['Sora']">
+    <main class="p-10 mb-80">
+        <section class="mb-10 w-[1024px]">
+            <img src="assets/img/banner.svg" alt="" class="w-full">
+        </section>
 
-  <header class="container max-w-7xl mx-auto flex justify-between pt-6 items-center">
-    <figure>
-      <img class="max-w-40" src="assets/img/logoinfo.svg" alt="Logo de InfoWeb by turma InfoWebeti">
-    </figure>
-    <nav class="">
-      <menu class="flex">
-        <li><a class="py-2 px-4 mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white transition delay-50 duration-400" href="#sobre">Sobre</a></li>
-        <li><a class="py-2 px-4 mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white transition delay-50 duration-400" href="#professores">Professores</a></li>
-        <li><a class="py-2 px-4 mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white transition delay-50 duration-400" href="#alunos">Alunos</a></li>
-        <li><a class="py-2 px-4 mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white transition delay-50 duration-400" href="#projetos">Projetos</a></li>
-        <li><a class="py-2 px-4 mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white transition delay-50 duration-400" href="#documentos">Documentos</a></li>
-      </menu>
-    </nav>
-  </header>
-  <main class="container mx-auto">
+        <section class="flex flex-col gap-6 w-[1024px]">
+            <h2 class="font-semibold text-xl">Compre pontos e distribua como quiser</h2>
 
-    <!-- hero -->
-    <section class="flex flex-col text-center items-center p-10 my-10 bg-gray-100 rounded-xl max-w-7xl p-20">
-      <h1 class="text-5xl font-semibold max-w-150">Depois de muita espera, ela finalmente chegou!</h1>
-      <p class="mt-6 mb-12 max-w-140">O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!</p>
+            <div class="grid grid-cols-3 gap-8">
+                <div class="border-2 border-zinc-200 flex flex-col p-6 gap-4 rounded-lg w-80">
+                    <img src="assets/img/ponto.svg" alt="">
 
-      <div class="flex justify-center gap-6">
-        <a href="#" class="bg-sky-800 text-white py-4 px-8 rounded-lg font-medium hover:-translate-y-1 transition delay-50 duration-400 hover:scale-110">Ser feliz agora</a>
-        <a href="#" class="bg-gray-100 text-sky-800 py-4 px-8 rounded-lg border-2 border-solid font-medium transition delay-50 duration-400 hover:-translate-y-1 hover:scale-110">Ficar triste</a>
-      </div>
-    </section>
+                    <div class="gap-4 flex flex-col h-full justify-between">
+                        <p class="text-sm text-[#808080]">Desenvolvimento, consultoria ou UX/UI para seus projetos decolarem.</p>
+                        <div class="gap-1 flex flex-col">
+                            <a href="#" class="font-bold flex justify-between items-center">
+                                <span>Comprar créditos</span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <p class="text-sm text-[#808080]">5 créditos por R$10.000,00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-2 border-zinc-200 flex flex-col p-6 gap-4 rounded-lg w-80">
+                    <img src="assets/img/ponto2.svg" alt="">
 
-    <!-- logos -->
-     <section>
-      <ul class="flex gap-24 my-16">
-        <li><img src="assets/img/logo1.svg" alt=""></li>
-        <li><img src="assets/img/logo2.svg" alt=""></li>
-        <li><img src="assets/img/logo3.svg" alt=""></li>
-        <li><img src="assets/img/logo4.svg" alt=""></li>
-        <li><img src="assets/img/logo5.svg" alt=""></li>
-        <li><img src="assets/img/logo6.svg" alt=""></li>
-        <li><img src="assets/img/logo7.svg" alt=""></li>
-      </ul>
-     </section>
-  
-    <!-- destaques -->
-     <section class="flex my-12 pb-10 text-lg">
-      <div class="flex gap-4 items-baseline text-gray-400 border-b-3 border-gray-400 border-b-gray-300 hover:border-b-sky-800 group hover:text-sky-800 p-10 transition delay-40 duration-300">
-        <i class="fa-solid fa-chevron-right"></i>
-        <div>
-          <strong>Ela é bonita</strong>
-          <p class="text-gray-500">Além de linda, ela é a mais top.</p>
-        </div>
+                    <div class="gap-4 flex flex-col h-full justify-between">
+                        <p class="text-sm text-[#808080]">Desenvolvimento de projeto de ponta a ponta, com nível de complexidade média com super desconto.</p>
+                        <div class="gap-1 flex flex-col">
+                            <a href="#" class="font-bold flex justify-between items-center">
+                                <span>Comprar créditos</span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <p class="text-sm text-[#808080]">21 créditos por R$120.000,00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-2 border-zinc-200 flex flex-col p-6 gap-4 rounded-lg w-80">
+                    <img src="assets/img/ponto3.svg" alt="Design de App">
 
-      </div>
+                    <div class="gap-4 flex flex-col h-full justify-between">
+                        <p class="text-sm text-[#808080]">Descontos cumulativos para projetos em Wordpress para 2025.</p>
+                        <div class="gap-1 flex flex-col">
+                            <a href="#" class="font-bold flex justify-between items-center">
+                                <span>Comprar créditos</span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <p class="text-sm text-[#808080]">21 créditos por R$12.000,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-      <div class="flex gap-4 items-baseline text-gray-400 border-b-3 border-gray-400 border-b-gray-300 hover:border-b-sky-800 group hover:text-sky-800 p-10 transition delay-40 duration-300">
-        <i class="fa-solid fa-chevron-right"></i>
-        <div>
-          <strong>O azul destaque</strong>
-          <p class="text-gray-500">O azul royal ficou para trás. Contemple o novo azul esmeralda.</p>
-        </div>
-      </div>
-
-      <div class="flex gap-4 items-baseline text-gray-400 border-b-3 border-gray-400 border-b-gray-300 hover:border-b-sky-800 group hover:text-sky-800 p-10 transition delay-40 duration-300">
-        <i class="fa-solid fa-chevron-right"></i>
-        <div>
-          <strong>Webeti</strong>
-          <p class="text-gray-500">O nosso mascote é um gênio da informática.</p>
-        </div>
-      </div>
-     </section>
-     <!-- mockup da camiseta da turma -->
-     <figure><img src="assets/img/mockup.svg" class="w-full" alt=""></figure>
-     <h2 class="flex text-center font-semibold justify-center text-5xl mt-14">Alunos que já compraram.</h2>
-     <div class="max-w-140 flex justify-self-center my-8">
-        <p class="flex justify-center text-center text-gray-500 text-xl font-normal">Junte-se aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa.</p>
-     </div>
-
-     <!-- métricas -->
-     <section class="grid grid-cols-3 gap-4 text-center my-14">
-      <div>
-        <h3 class="text-5xl font-semibold mb-4">243+</h3>
-        <span class="text-gray-500">Alunos felizes</span>
-      </div>
-      <div>
-        <h3 class="text-5xl font-semibold mb-4">38.3903+</h3>
-        <span class="text-gray-500">Alunos adquirindo</span>
-      </div>
-      <div>
-        <h3 class="text-5xl font-semibold mb-4">154+</h3>
-        <span class="text-gray-500">Alunos tristes</span>
-      </div>
-     </section>
-  </main>
-  
+    <footer class="flex justify-end py-4 px-14 border-t-2 border-zinc-200 bottom-0 w-full">
+        <img src="assets/img/vector.svg" alt="logo">
+    </footer>
 </body>
 </html>
