@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body class="font-['Sora']">
+    <header class="w-full py-4 px-8 bg-neutral-100 border-b border-stone-300 inline-flex justify-between items-center">
+        <img src="assets/img/agencia.svg" alt="">
+        <div class="flex">
+            <img src="assets/img/ld.svg" alt="">
+            <div class="flex flex-col text-xs ml-2 inline-flex">
+                <strong>John Doe</strong>
+                <span>Agência Web</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex">
+        <section class="w-68 h-[1010px] self-stretch bg-white inline-flex flex-col gap-12 items-start p-8">
+            <p class="text-2xl font-semibold text-neutral-600">Canal do cliente</p>
+            <div class="text-sm text-zinc-500">
+                <div class="flex gap-2 hover:cursor-pointer hover:font-semibold">                
+                    <img src="assets/img/lojadeproj.svg" alt="">                    
+                    <p class="">Loja de projetos</p>
+                </div>
+                <div class="flex flex-col">
+                    <a href="index.html" class="ml-7 mt-4 hover:text-sky-800 hover:cursor-pointer hover:font-semibold">Dashboard</a>
+                    <a href="index2.html" class="ml-7 mt-4 hover:text-sky-800 hover:cursor-pointer hover:font-semibold">Compra de créditos</a>
+                    <a href="" class="ml-7 mt-4 hover:text-sky-800 hover:cursor-pointer hover:font-semibold">Concluídos</a>
+                </div>
+            </div>
+            <div class="flex gap-2 text-sm text-zinc-500 hover:font-semibold hover:cursor-pointer">
+                <img class="w-5 h-5" src="assets/img/gestaodep.svg" alt="">
+                <p class="">Gestão de projetos</p>
+            </div>
+            <div class="flex gap-2 text-sm text-zinc-500 hover:font-semibold hover:cursor-pointer">
+                <img class="w-5 h-5" src="assets/img/campanhas.svg" alt="">
+                <p class="">Campanhas</p>  
+            </div>
+        </section>
+
+        <section class="border-l-2 border-zinc-200 p-8">
+            <section>
+                <a href="#" class="text-neutral-700 text-sm underline underline-offset-3 mr-1">Loja de projetos</a>
+                <i class="fa-solid fa-chevron-right text-neutral-500 text-[9px]"></i>
+                <a href="#" class="text-neutral-700 text-sm underline underline-offset-3 ml-1">Compra de créditos</a>
+                <i class="fa-solid fa-chevron-right text-neutral-500 text-[9px]"></i>
+                <a href="#" class="text-neutral-500 text-sm ml-1">Comprar créditos</a>
+            </section>
+
+            <section class= "w-[1024px] mt-4">
+                <div class="border-b border-zinc-300 pb-4 self-stretch">
+                    <h2 class="font-semibold text-2xl">Compra de pontos base</h2>                
+                </div>
+
+                <div class="grid grid-cols-3 gap-8 mt-6">
+                    <div class="h-48 p-6 bg-neutral-100 rounded-lg inline-flex flex-col col-span-2 justify-start items-start gap-4 overflow-hidden">
+                        <p class="text-lg text-black font-semibold">Limite mensal</p>
+                        <p class="justify-center text-black text-sm">Confira a quantidade de pontos disponível para compra</p>
+                        <img class="self-stretch" src="assets/img/barra.svg" alt="">
+                        <div class="w-full flex justify-between">
+                            <div>
+                                <p class="justify-center text-neutral-400 text-[12px]">Comprado esse mês</p>
+                                <p class="justify-center text-black text-[12px] font-bold">100 créditos</p>    
+                            </div>
+                            <div class="text-right">
+                                <p class="justify-center text-neutral-400 text-[12px]">Seu limite mensal</p>
+                                <p class="justify-center text-black text-[12px] font-bold">2.000 créditos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-48 p-6 bg-neutral-100 rounded-lg inline-flex flex-col items-start gap-4 overflow-hidden">
+                        <p class="text-lg text-black font-semibold">Informações</p>
+                        <div class="flex text-sm">
+                            <img class="w-5" src="assets/img/card.svg" alt="">
+                            <span class="ml-2 mr-1">Valor mínimo de</span>
+                            <span class="text-black font-bold">100 créditos</span>
+                        </div>
+                        <div class="flex text-sm">
+                            <img class="w-5" src="assets/img/calendar.svg" alt="">
+                            <span class="ml-2 mr-1">Validade de</span>
+                            <span class="text-black font-bold">24 meses</span>
+                        </div>
+                        <div class="flex text-sm">
+                            <img class="w-5" src="assets/img/money.svg" alt="">
+                            <span class="ml-2 mr-1">Limite mensal de</span>
+                            <span class="text-black font-bold">2.000 créditos</span>
+                        </div>
+                    </div>
+                    <div class="h-48 p-6 bg-neutral-100 rounded-lg inline-flex flex-col col-span-3 justify-start items-start gap-4 overflow-hidden">
+                        <div class="flex gap-60">
+                            <div>
+                                <p class="text-lg text-black font-semibold">Quantidade de créditos para compra</p>
+                                <div class="text-center mt-3">
+                                    <div class="flex justify-center gap-4 items-center">
+                                        <button class="border rounded-full w-7 h-7 hover:cursor-pointer border-sky-900 text-sky-900"><i class="fa-solid fa-minus"></i></button>
+                                        <p class="text-4xl font-semibold border-b-2 border-neutral-300 px-16 py-3">100</p>
+                                        <button class="border rounded-full w-7 h-7 hover:cursor-pointer border-sky-900 text-sky-900"><i class="fa-solid fa-plus"></i> </button>                              
+                                    </div>
+                                    <p class="text-neutral-500 text-sm mt-3">Digite o valor aproximado</p>                                
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-lg text-black font-semibold mb-7">Total em reais</p>
+                                <p class="text-4xl text-black font-bold">R$20.000,00</p>
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-18">
+                    <div class="flex gap-4 items-baseline border-b border-zinc-300 pb-4">
+                        <p class=" text-lg font-semibold">Mais informações sobre o produto</p> 
+                        <i class="fa-solid fa-chevron-down text-sky-800"></i>             
+                    </div>
+                    <div class="mt-4 text-sm w-[800px]">
+                        <span class="text-neutral-600 font-bold">ATENÇÃO:</span>
+                        <span class="text-neutral-400 font-normal">A transferência dos pontos comprados para programas parceiros (Milhas) depende da elegibilidade do seu cartão de crédito. Consulte os cartões elegíveis na página do produto a partir do menu Viagens - Programas Parceiros.</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="flex justify-between py-6 px-14 border-t-2 border-zinc-200 fixed bottom-0 w-[1239px] bg-white right-0 items-center">
+            <div>
+                <p class="text-base text-sky-800 font-semibold hover:cursor-pointer">Voltar</p>
+            </div>
+            <div class="flex gap-4 justify-center">
+                <div class="border rounded-sm border-sky-800 px-10 py-3 hover:cursor-pointer" >
+                    <p class="text-sky-800 font-semibold">Adicionar ao carrinho</p>
+                </div>
+                <div class="flex items-center gap-3 border rounded-sm bg-sky-800 text-white px-10 py-3 hover:cursor-pointer">
+                    <p>Continuar</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+    </footer>
+</body>
+</html>
