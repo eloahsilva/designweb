@@ -6,35 +6,37 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <title>Landingpage - Version 1.0</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Landingpage - Version 2.0</title>
   <style></style>
 </head>
 <body class="font-['Inter']">
 
-  <header class="container max-w-7xl mx-auto flex justify-between pt-6 items-center">
+  <header class="navbar container mx-auto flex justify-between pt-6">
     <figure>
       <img class="max-w-40" src="assets/img/logoinfo.svg" alt="Logo de InfoWeb by turma InfoWebeti">
     </figure>
     <nav class="">
       <menu class="flex">
-        <li><a class="py-2 px-4 mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white transition delay-50 duration-400" href="#sobre">Sobre</a></li>
-        <li><a class="py-2 px-4 mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white transition delay-50 duration-400" href="#professores">Professores</a></li>
-        <li><a class="py-2 px-4 mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white transition delay-50 duration-400" href="#alunos">Alunos</a></li>
-        <li><a class="py-2 px-4 mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white transition delay-50 duration-400" href="#projetos">Projetos</a></li>
-        <li><a class="py-2 px-4 mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white transition delay-50 duration-400" href="#documentos">Documentos</a></li>
+        <li><a class="btn btn-ghost mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white" href="#sobre">Sobre</a></li>
+        <li><a class="btn btn-ghost mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white" href="#professores">Professores</a></li>
+        <li><a class="btn btn-ghost mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white" href="#alunos">Alunos</a></li>
+        <li><a class="btn btn-ghost mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white" href="#projetos">Projetos</a></li>
+        <li><a class="btn btn-ghost mx-2 rounded-xl text-gray-500 hover:bg-sky-800 hover:text-white" href="#documentos">Documentos</a></li>
       </menu>
     </nav>
   </header>
   <main class="container mx-auto">
 
     <!-- hero -->
-    <section class="flex flex-col text-center items-center p-10 my-10 bg-gray-100 rounded-xl max-w-7xl p-20">
+    <section class="hero flex flex-col text-center mt-5 bg-gray-100 rounded-xl p-20">
       <h1 class="text-5xl font-semibold max-w-150">Depois de muita espera, ela finalmente chegou!</h1>
       <p class="mt-6 mb-12 max-w-140">O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!</p>
 
       <div class="flex justify-center gap-6">
-        <a href="#" class="bg-sky-800 text-white py-4 px-8 rounded-lg font-medium hover:-translate-y-1 transition delay-50 duration-400 hover:scale-110">Ser feliz agora</a>
-        <a href="#" class="bg-gray-100 text-sky-800 py-4 px-8 rounded-lg border-2 border-solid font-medium transition delay-50 duration-400 hover:-translate-y-1 hover:scale-110">Ficar triste</a>
+        <a href="#" class="btn bg-sky-800 text-white py-7 px-10 rounded-lg font-medium hover:-translate-y-1 transition delay-50 duration-400 hover:scale-110">Ser feliz agora</a>
+        <a href="#" class="btn bg-gray-100 text-sky-800 py-7 px-10 rounded-lg border-1 border-solid border-sky-800 font-medium transition delay-50 duration-400 hover:-translate-y-1 hover:scale-110">Ficar triste</a>
       </div>
     </section>
 
@@ -79,7 +81,11 @@
       </div>
      </section>
      <!-- mockup da camiseta da turma -->
-     <figure><img src="assets/img/mockup.svg" class="w-full" alt=""></figure>
+     <figure class="hover-gallery">
+        <img src="assets/img/mockup.svg" class="w-full" alt="">
+        <img src="assets/img/mockup.svg" class="w-full" alt="">
+        <img src="assets/img/mockup.svg" class="w-full brightness-120" alt="">
+     </figure>
      <h2 class="flex text-center font-semibold justify-center text-5xl mt-14">Alunos que já compraram.</h2>
      <div class="max-w-140 flex justify-self-center my-8">
         <p class="flex justify-center text-center text-gray-500 text-xl font-normal">Junte-se aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa.</p>
