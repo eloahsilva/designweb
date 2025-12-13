@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.19 - Lista 1</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div x-data="{cor: 'Verde'}">
+        <p x-text="cor"></p>
+        <button @click="cor = cor === 'Verde' ? 'Amarelo' : cor === 'Amarelo' ? 'Vermelho' : 'Verde'">Mudar cor</button>
+    </div>
+</body>
+</html>

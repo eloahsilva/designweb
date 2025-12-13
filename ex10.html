@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.10 - Lista 1</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        div{
+            height: 80px;
+            width: 80px;
+            background-color: rgba(95, 158, 160, 0.695);
+            text-align: center;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div x-data="{texto: 'Saiu!'}" x-text="texto" @mouseenter="texto = 'Entrou!'" @mouseleave="texto = 'Saiu!'"></div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.15 - Lista 1</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div x-data="{liked: false, likes: 0}">
+        <button @click="liked = !liked; likes = liked ? likes + 1 : likes - 1" x-text="liked ? '❤️' : '🤍'"></button>
+        <span x-text="likes"></span>
+    </div>
+</body>
+</html>

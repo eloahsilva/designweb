@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.16 - Lista 1</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div x-data="{tab: 1}">
+        <div>
+            <button @click="tab = 1">Tab 1</button>
+            <button @click="tab = 2">Tab 2</button>
+            <button @click="tab = 3">Tab 3</button>
+        </div>
+
+        <div x-show="tab === 1">
+            <br>Blablablablabla
+        </div>
+
+        <div x-show="tab === 2">
+            <br>Blebleblebleble
+        </div>
+
+        <div x-show="tab === 3">
+            <br>Bliblibliblibli
+        </div>
+    </div>
+</body>
+</html>

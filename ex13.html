@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.13 - Lista 1</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        .menor{
+            height: 50px;
+            width: 65px;
+        }
+    </style>
+</head>
+<body>
+    <div x-data="{ aberto: false }" class="maior">
+        <button @click="aberto = !aberto">Menu ▼</button>
+        <div x-show="aberto" @click.outside="aberto = false" class="menor">
+            <a href="#">Link 1</a><br>
+            <a href="#">Link 2</a>
+        </div>
+    </div>
+</body>
+</html>
