@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4 - Task Manager</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('tasks', {
+                data: [
+                    {id: 1, text: 'Aprender Alpine.js', done: true },
+                    {id: 2, text: 'Criar Store Global', done: false },
+                    {id: 3, text: 'Finalizar Projeto', done: false },
+                ],
+                currentFilter: 'all', 
+                get filtered() {
+                    switch (this.currentFilter) {
+                        case 'done':
+                            return this.data.filter(task => task.done);
+                        case 'todo':
+                            return this.data.filter(task => !task.done);
+                        case 'all':
+                        default:
+                            return this.data;
+                    }
+                },
+                get totalTodo() {return this.data.filter(task => !task.done).length;},
+                get totalDone() {return this.data.filter(task => task.done).length;},
+                toggle(id) {
+                    const task = this.data.find(t => t.id === id);
+                    if (task) {
+                        task.done = !task.done;
+                    }
+                },
+                add(text) {
+                    if (text.trim() === '') return;
+                    const newId = this.data.length > 0 ? Math.max(...this.data.map(t => t.id)) + 1 : 1;
+                    this.data.push({id: newId, text: text.trim(), done: false});
+                }
+            });
+        });
+    </script>
+    <style>
+        main{
+            margin: 10px;
+        }
+        h1{
+            margin-bottom: 14px;
+        }
+        .novatarefa{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .remove{
+            margin: 3px;
+        }
+    </style>
+</head>
+<body x-data>
+    <main>
+        <header>
+            <h1>Minhas Tarefas</h1>
+            <div x-show="$store.tasks.totalTodo > 0">
+                <span x-text="$store.tasks.totalTodo"></span><span> pendentes</span>
+            </div>
+        </header>
+
+        <div x-data="{newTask: ''}" class="novatarefa">
+            <input type="text" placeholder="Nova tarefa..." x-model="newTask" @keydown.enter="$store.tasks.add(newTask); newTask = ''">
+            <button @click="$store.tasks.add(newTask); newTask = ''" :disabled="newTask.trim() === ''"> </button>
+        </div>
+        
+        <div>
+            <button @click="$store.tasks.currentFilter = 'all'" :class="{$store.tasks.currentFilter === 'all', $store.tasks.currentFilter !== 'all'}">Todas</button>
+            <button @click="$store.tasks.currentFilter = 'todo'" :class="{$store.tasks.currentFilter === 'todo', $store.tasks.currentFilter !== 'todo'}">Pendentes</button>
+            <button @click="$store.tasks.currentFilter = 'done'" :class="{$store.tasks.currentFilter === 'done', $store.tasks.currentFilter !== 'done'}">Feitas</button>
+        </div>
+        
+        <ul>
+            <template x-for="task in $store.tasks.filtered" :key="task.id">
+                <li :class="{'task-done': task.done}">
+                    <label>
+                        <input type="checkbox" :checked="task.done" @change="$store.tasks.toggle(task.id)">
+                        <span x-text="task.text"></span>
+                        <button class="remove" @click="$store.tasks.data = $store.tasks.data.filter(t => t.id !== task.id)">x</button>
+                    </label>
+                </li>
+            </template>
+        </ul>
+
+        <p x-show="$store.tasks.filtered.length === 0">Nenhuma tarefa encontrada.</p>
+    </main>
+</body>
+</html>
