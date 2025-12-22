@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 4 - Task Manager</title>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script>
         document.addEventListener('alpine:init', () => {
             Alpine.store('tasks', {
@@ -42,48 +44,35 @@
         });
     </script>
     <style>
-        main{
-            margin: 10px;
-        }
-        h1{
-            margin-bottom: 14px;
-        }
-        .novatarefa{
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        .remove{
-            margin: 3px;
-        }
     </style>
 </head>
-<body x-data>
-    <main>
-        <header>
-            <h1>Minhas Tarefas</h1>
-            <div x-show="$store.tasks.totalTodo > 0">
+<body x-data class="flex justify-center m-10">
+    <main class="w-[500px] h-[450px] bg-white rounded-xl shadow-lg p-6 m-[10px]">
+        <header class="flex items-center justify-between pr-3">
+            <h1 class="text-3xl font-bold mb-[14px]">Minhas Tarefas</h1>
+            <div x-show="$store.tasks.totalTodo > 0" class="bg-blue-200 text-blue-700 text-xs font-bold rounded-2xl py-1 px-2">
                 <span x-text="$store.tasks.totalTodo"></span><span> pendentes</span>
             </div>
         </header>
 
-        <div x-data="{newTask: ''}" class="novatarefa">
-            <input type="text" placeholder="Nova tarefa..." x-model="newTask" @keydown.enter="$store.tasks.add(newTask); newTask = ''">
-            <button @click="$store.tasks.add(newTask); newTask = ''" :disabled="newTask.trim() === ''"> </button>
+        <div x-data="{newTask: ''}" class="novatarefa flex items-center my-[10px]">
+            <input type="text" placeholder="Nova tarefa..." x-model="newTask" @keydown.enter="$store.tasks.add(newTask); newTask = ''" class="input flex bg-neutral-100 w-105 h-12">
+            <button @click="$store.tasks.add(newTask); newTask = ''" :disabled="newTask.trim() === ''" class="btn bg-blue-700 rounded-lg w-7 h-12 ml-2"> </button>
         </div>
         
-        <div>
-            <button @click="$store.tasks.currentFilter = 'all'" :class="{$store.tasks.currentFilter === 'all', $store.tasks.currentFilter !== 'all'}">Todas</button>
-            <button @click="$store.tasks.currentFilter = 'todo'" :class="{$store.tasks.currentFilter === 'todo', $store.tasks.currentFilter !== 'todo'}">Pendentes</button>
-            <button @click="$store.tasks.currentFilter = 'done'" :class="{$store.tasks.currentFilter === 'done', $store.tasks.currentFilter !== 'done'}">Feitas</button>
+        <div class="flex gap-4 text-sm font-bold my-4 ">
+            <button @click="$store.tasks.currentFilter = 'all'" :class="{$store.tasks.currentFilter === 'all', $store.tasks.currentFilter !== 'all'}" class="bg-neutral-100 text-neutral-500 rounded-2xl px-3 py-1">Todas</button>
+            <button @click="$store.tasks.currentFilter = 'todo'" :class="{$store.tasks.currentFilter === 'todo', $store.tasks.currentFilter !== 'todo'}" class="bg-neutral-100 text-neutral-500 rounded-2xl px-3 py-1">Pendentes</button>
+            <button @click="$store.tasks.currentFilter = 'done'" :class="{$store.tasks.currentFilter === 'done', $store.tasks.currentFilter !== 'done'}"class="bg-neutral-100 text-neutral-500 rounded-2xl px-3 py-1">Feitas</button>
         </div>
         
         <ul>
             <template x-for="task in $store.tasks.filtered" :key="task.id">
                 <li :class="{'task-done': task.done}">
-                    <label>
-                        <input type="checkbox" :checked="task.done" @change="$store.tasks.toggle(task.id)">
-                        <span x-text="task.text"></span>
-                        <button class="remove" @click="$store.tasks.data = $store.tasks.data.filter(t => t.id !== task.id)">x</button>
+                    <label class="flex items-center border border-neutral-100 mb-2 rounded-xl hover:border-neutral-300">
+                        <input type="checkbox" :checked="task.done" @change="$store.tasks.toggle(task.id)" class="checkbox checkbox-success rounded-sm border-neutral-200 mx-3" checked="checked">
+                        <span x-text="task.text" class="w-90"></span>
+                        <button class="remove flex justify-end text-white text-lg hover:text-red-300 p-2 " @click="$store.tasks.data = $store.tasks.data.filter(t => t.id !== task.id)">x</button>
                     </label>
                 </li>
             </template>

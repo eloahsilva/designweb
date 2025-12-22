@@ -5,34 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 5 - Calculadora Freelancer</title>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <div x-data="{servicos: [], novoservico: {nome: '', valor: 0}, total() {return this.servicos.reduce((sum, item) => sum + item.valor, 0);}}">
+<body class="flex justify-center">
+    <div x-data="{servicos: [{nome:'Logo Design', valor: 500}, {nome:'Website', valor: 1000}], novoservico: {nome: '', valor: 0}, total() {return this.servicos.reduce((sum, item) => sum + item.valor, 0);}}" class="w-[500px] h-[520px] border border-neutral-200 border-2 rounded-2xl m-10 p-8">
         <div>
-            <div>
-                <h1>$ Orçamento #001</h1>
+            <div class="flex gap-4 items-center mb-10 border-b  border-b-2 border-b-neutral-200 pb-4">
+                <span class="text-3xl font-semibold bg-green-100 text-green-600 px-5 py-2 rounded-full">$</span>
+                <h1 class="text-xl font-bold text-neutral-800">Orçamento #001</h1>
             </div>
 
-            <div>
-                <input type="text" x-model="novoservico.nome">
-                <input type="number" x-model.number="novoservico.valor">
-                <button @click="if (novoservico.nome && novoservico.valor) {servicos.push({...novoservico}); novoservico.nome = ''; novoservico.valor = 0;}">Adicionar</button>
+            <div class="flex gap-3">
+                <input type="text" x-model="novoservico.nome" class="input w-50 h-8 bg-slate-100">
+                <input type="number" x-model.number="novoservico.valor" class="input w-30 h-8 bg-slate-100">
+                <button @click="if (novoservico.nome && novoservico.valor) {servicos.push({...novoservico}); novoservico.nome = ''; novoservico.valor = 0;}" class="btn bg-slate-100 h-8">Adicionar</button>
             </div>
             
             <ul>
                 <template x-for="(item, index) in servicos" :key="index">
                     <li>
-                        <span x-text="item.nome + '  '"></span>
-                        <span x-text="'R$ ' + item.valor"></span>
+                        <div class="flex justify-between bg-slate-100 my-3 p-2 px-4 rounded-lg">
+                            <span x-text="item.nome" class="text-slate-600"></span>
+                            <span x-text="'R$ ' + item.valor" class="font-bold text-slate-700"></span>                            
+                        </div>
                     </li>
                 </template>
             </ul>
         </div>
         
         <div>
-            <div>
-                <span>TOTAL  </span>
-                <span x-text="'R$ ' + total()"></span>
+            <div class="flex justify-between bg-slate-900 my-3 p-3 px-4 rounded-lg font-bold">
+                <span class="text-slate-400">TOTAL</span>
+                <span x-text="'R$ ' + total()" class="text-green-500"></span>
             </div>
         </div>
     </div>
